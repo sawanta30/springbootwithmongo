@@ -10,6 +10,7 @@ public class Employee {
 	private String id;
 	private String name;
 	private String designation;
+	private Grades grade;
 //	private Date dateOfBirth;
 //	private Date dateOfJoin;
 //	private Grades Grade;
@@ -30,6 +31,12 @@ public class Employee {
 	}
 	public void setDesignation(String designation) {
 		this.designation = designation;
+	}
+	public Grades getGrade() {
+		return grade;
+	}
+	public void setGrade(Grades grade) {
+		this.grade = grade;
 	}
 	
 	

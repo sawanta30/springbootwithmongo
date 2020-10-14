@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mongodb.beans.Employee;
-import com.mongodb.dao.MongoDao;
 import com.mongodb.service.EmployeeRepository;
 
 @RestController
