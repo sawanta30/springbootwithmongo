@@ -5,14 +5,19 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
+@Document(collection="Book")
 public class Book {
 
 	@Id
 	private String id;
 	private String name;
 	private String author;
+	@JsonFormat(shape=Shape.STRING, pattern="dd/mm/yyyy")
 	private Date dateOfPublish;
+	
 	public String getId() {
 		return id;
 	}

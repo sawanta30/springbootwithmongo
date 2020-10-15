@@ -35,7 +35,7 @@ public class BookController {
 		return bookRepository.findById(id);
 	}
 	
-	@RequestMapping(value="/book",method=RequestMethod.POST)
+	@RequestMapping(value="/book",method=RequestMethod.DELETE)
 	public String deleteBook(@PathVariable String id) {
 		String result;
 		try {
