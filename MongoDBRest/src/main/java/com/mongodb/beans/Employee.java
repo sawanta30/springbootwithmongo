@@ -1,7 +1,13 @@
 package com.mongodb.beans;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
 
 @Document(collection = "Employee")
 public class Employee {
@@ -11,9 +17,13 @@ public class Employee {
 	private String name;
 	private String designation;
 	private Grades grade;
-//	private Date dateOfBirth;
-//	private Date dateOfJoin;
-//	private Grades Grade;
+	
+	@JsonFormat(shape=Shape.STRING,pattern="dd/mm/yyyy")
+	private Date dateOfBirth;
+	@JsonFormat(shape=Shape.STRING,pattern="dd/mm/yyyy")
+	private Date dateOfJoin;
+	
+	
 	public String getId() {
 		return id;
 	}
